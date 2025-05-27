@@ -17,11 +17,7 @@
         <div class="card-body">
             <div class="row mb-4">
                 <div class="col-md-6">
-<<<<<<< HEAD
                     <select id="store-select"  class="form-select">
-=======
-                    <select id="store-select" class="form-select">
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                         <option value="">Select a Store</option>
                         @foreach($stores as $store)
                             <option value="{{ $store->id }}">{{ $store->name }}</option>
@@ -37,7 +33,6 @@
                 </div>
             </div>
             <div id="products-container">
-                <!-- Products will be loaded here via Axios -->
             </div>
         </div>
     </div>

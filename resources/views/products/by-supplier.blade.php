@@ -35,7 +35,6 @@
                 </div>
             </div>
             <div id="products-container">
-                <!-- Products will be loaded here via Axios -->
             </div>
         </div>
     </div>

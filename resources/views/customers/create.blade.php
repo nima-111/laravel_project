@@ -76,10 +76,7 @@
 @push('scripts')
 <script>
     $(document).ready(function() {
-<<<<<<< HEAD
 
-=======
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
         $('#customerForm').on('submit', function(event) {
             let isValid = true;
 

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Middleware\SetLocale;
 use Illuminate\Foundation\Application;
+use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
@@ -11,15 +13,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-<<<<<<< HEAD
-        $middleware->use([
-            \Illuminate\Session\Middleware\StartSession::class,
-            App\Http\Middleware\SetLocale::class,
-        ]);
 
-=======
-        //
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
+           // Prepend StartSession to ensure sessions are started
+        $middleware->prepend(StartSession::class);
+
+        // Append your localization middleware
+        $middleware->append(SetLocale::class);
+
+
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

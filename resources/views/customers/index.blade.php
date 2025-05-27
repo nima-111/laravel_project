@@ -106,17 +106,10 @@
                         @endif
 
                         <!-- Pagination Elements -->
-<<<<<<< HEAD
                             @for ($i = 1; $i <= $customers->lastPage(); $i++)
                                 <li class="page-item {{ ($customers->currentPage() == $i) ? 'active' : '' }}">
                                     <a class="page-link" href="{{ $customers->url($i) }}">{{ $i }}</a>
                                 </li>
-=======
-                        @for ($i = 1; $i <= $customers->lastPage(); $i++)
-                            <li class="page-item {{ ($customers->currentPage() == $i) ? 'active' : '' }}">
-                                <a class="page-link" href="{{ $customers->url($i) }}">{{ $i }}</a>
-                            </li>
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                             @endfor
 
                             <!-- Next Page Link -->
@@ -143,13 +136,8 @@
 @push('scripts')
 <script>
     $(document).ready(function() {
-<<<<<<< HEAD
         $('#customerSearch').on('keyup', function(e) {
            // if (e.which === 13) { // Enter key
-=======
-        $('#customerSearch').on('keypress', function(e) {
-            if (e.which === 13) { // Enter key
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                 var searchTerm = $(this).val();
 
                 if(searchTerm.length > 0) {
@@ -217,11 +205,7 @@
                     // If search field is empty, reload the original data with pagination
                     window.location.href = '{{ route("customers.index") }}';
                 }
-<<<<<<< HEAD
            // }
-=======
-            }
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
     });
 
     // Function to update pagination based on response data
@@ -350,8 +334,4 @@
 });
 </script>
 @endpush
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b

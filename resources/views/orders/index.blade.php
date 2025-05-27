@@ -105,28 +105,16 @@
         $('#customer-search-form').on('submit', function(e) {
             e.preventDefault();
             const searchTerm = $('#customer-search').val();
-<<<<<<< HEAD
             $('#lstOrders').html('');
-=======
-            $('#lstOrders').empty();
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
             $('#orderDetails').empty();
 
             axios.get(`/api/customers/search/${searchTerm}`)
                 .then(response => {
-<<<<<<< HEAD
                     displayCustomers(response.data);
-=======
-                    displayCustomers(response.data.customers);
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                 });
         });
     });
 </script>
 @endpush
 
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b

@@ -8,14 +8,13 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "maatwebsite/excel": "^3.1",
+        "mpdf/mpdf": "^8.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-<<<<<<< HEAD
         "laravel-lang/common": "^6.7",
-=======
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",

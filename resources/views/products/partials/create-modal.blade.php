@@ -43,11 +43,7 @@
                         <select class="form-select" id="supplier_id" name="supplier_id" required>
                             <option value="">Select Supplier</option>
                             @foreach($suppliers as $supplier)
-<<<<<<< HEAD
                                 <option value="{{ $supplier->id }}">{{ $supplier->first_name }} {{ $supplier->last_name }}</option>
-=======
-                                <option value="{{ $supplier->id }}">{{ $supplier->name }}</option>
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                             @endforeach
                         </select>
                         <div class="invalid-feedback"></div>
@@ -75,12 +71,9 @@ $(document).ready(function() {
         e.preventDefault();
         let form = $(this);
         let formData = new FormData(this);
-<<<<<<< HEAD
 //il faut ajouter ici un controle coté client
 //...
 
-=======
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
 
         $.ajax({
             url: form.attr('action'),
@@ -90,14 +83,11 @@ $(document).ready(function() {
             contentType: false,
             success: function(response) {
                 $('#createProductModal').modal('hide');
-<<<<<<< HEAD
 
                 //au lieu de recharger la page
                 //ça serais plus interessant de
                 //ajouter une ligne du nouveau produit
                 //  dans le tableau
-=======
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
                 window.location.reload();
             },
             error: function(xhr) {
@@ -119,8 +109,4 @@ $(document).ready(function() {
     });
 });
 </script>
-<<<<<<< HEAD
 @endpush
-=======
-@endpush
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b

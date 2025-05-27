@@ -37,6 +37,21 @@ class Store extends Model
 
     /**
      * Get all of the products for the current store.
+<<<<<<< HEAD
+     */  public function products(): HasManyThrough
+    {
+        return $this->hasManyThrough(
+            Product::class,
+            Stock::class,
+            'store_id', // Foreign key on stocks table...
+            'id', // Foreign key on products table...
+            'id', // Local key on stores table...
+            'product_id' // Local key on stocks table...
+        );
+    }
+
+}
+=======
      */
     public function products(): HasManyThrough
     {
@@ -44,3 +59,4 @@ class Store extends Model
     }
 
 }
+>>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00

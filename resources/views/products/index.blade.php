@@ -1,6 +1,10 @@
 @extends('layouts.app')
+@include('products.partials.import-modal')
+
 
 @section('content')
+
+
 <div class="container py-4">
     <div class="row mb-4">
         <div class="col d-flex justify-content-between align-items-center">
@@ -24,6 +28,16 @@
                     </svg>
                     Back to Dashboard
                 </a>
+<<<<<<< HEAD
+                <a class="btn btn-success" href="{{ route('products.print') }}" target="_blank"><i class="fa fa-print"></i>
+                    Print</a>
+=======
+>>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
+                <button type="button" class="btn bg-info text-white  " data-bs-toggle="modal"
+                    data-bs-target="#importProductModal">
+                    <i class="fa fa-file"></i> Import
+                </button>
+                    <a  style="background-color: #d63384; color: white; text-decoration: none;" href="{{ route('products.export') }}"><i class="fa fa-download"></i> Export Products </a>
             </div>
         </div>
     </div>
@@ -221,11 +235,7 @@
                 $('.d-flex.justify-content-center.mt-4').html(paginationHtml);
 
                 // Reattach event handlers
-<<<<<<< HEAD
 
-=======
-                attachEventHandlers();
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
             },
             error: function(xhr) {
                 console.error('Error loading products:', xhr);
@@ -233,7 +243,6 @@
         });
     }
 
-<<<<<<< HEAD
     // Handle search
 
     $('#searchInput').on('keypress', function(e) {
@@ -242,59 +251,6 @@
             let search = $(this).val();
             loadProducts(1, search);
        }
-=======
-    function attachEventHandlers() {
-        // Handle edit product button click
-        $('.edit-product').on('click', function() {
-            let productId = $(this).data('id');
-
-            $.ajax({
-                url: `/api/products/${productId}`,
-                type: 'GET',
-                success: function(product) {
-                    $('#editProductId').val(product.id);
-                    $('#editName').val(product.name);
-                    $('#editDescription').val(product.description);
-                    $('#editPrice').val(product.price);
-                    $('#editCategoryId').val(product.category_id);
-                    $('#editSupplierId').val(product.supplier_id);
-                    $('#editProductForm').attr('action', `/products/${productId}`);
-                },
-                error: function(xhr) {
-                    console.error('Error fetching product data:', xhr);
-                }
-            });
-        });
-
-        // Handle delete product button click
-        $('.delete-product').on('click', function() {
-            let productId = $(this).data('id');
-            let productName = $(this).data('name');
-
-            $('#deleteProductId').val(productId);
-            $('#productName').text(productName);
-            $('#deleteProductForm').attr('action', `/products/${productId}`);
-        });
-
-        // Handle pagination clicks
-        $('.pagination .page-link').on('click', function(e) {
-            e.preventDefault();
-            let page = $(this).data('page');
-            let search = $('#searchInput').val();
-            loadProducts(page, search);
-        });
-    }
-
-    // Handle search
-    let searchTimeout;
-    $('#searchInput').on('keyup', function() {
-        clearTimeout(searchTimeout);
-        let search = $(this).val();
-
-        searchTimeout = setTimeout(function() {
-            loadProducts(1, search);
-        }, 500);
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
     });
 
     $('#searchButton').on('click', function() {
@@ -308,8 +264,4 @@
 </script>
 @endpush
 
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 538171d31a2abcefb97a2a68dc6f9744aa14f19b
