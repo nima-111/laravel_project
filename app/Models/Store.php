@@ -37,7 +37,6 @@ class Store extends Model
 
     /**
      * Get all of the products for the current store.
-<<<<<<< HEAD
      */  public function products(): HasManyThrough
     {
         return $this->hasManyThrough(
@@ -51,12 +50,3 @@ class Store extends Model
     }
 
 }
-=======
-     */
-    public function products(): HasManyThrough
-    {
-        return $this->hasManyThrough(Product::class, Stock::class);
-    }
-
-}
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00

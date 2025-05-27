@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\User;
 use App\Models\Store;
 use App\Models\Product;
@@ -15,10 +14,6 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
-
-
-
-
 /**
      * Show the application dashboard.
      *
@@ -29,7 +24,6 @@ class DashboardController extends Controller
 {
     public function index(): View
     {
-
 
          $user = User::find(1); // Fetch user with ID 1
 
@@ -55,8 +49,6 @@ class DashboardController extends Controller
             'storeLabels' => $storeLabels,
             'storeCounts' => $storeCounts
         ]);
-
-    return view('dashboard');
 
     }
 
@@ -120,7 +112,6 @@ class DashboardController extends Controller
         return view("orders.index");
     }
 
-
 public function saveCookie()
    {
       $name = request()->input("txtCookie");
@@ -156,5 +147,4 @@ public function saveCookie()
 
 
     
-
 }

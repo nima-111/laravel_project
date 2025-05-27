@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Models\User;
-=======
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Supplier;
@@ -17,11 +14,8 @@ use App\Http\Requests\ProductRequest;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ProductExport;
 use App\Imports\ProductImport;
-<<<<<<< HEAD
 use Mpdf\Mpdf;
 
-=======
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 
 
   /**
@@ -188,11 +182,10 @@ class ProductController extends Controller
         return back()->with('success', 'Products imported successfully.');
     }
 
-<<<<<<< HEAD
 // print
   public function print()
     {
-        $user = User::find(1); 
+        $user = User::find(99); 
         $products = Product::with(['category', 'supplier', 'stock'])->get();
         $data = [
             'products' => $products,
@@ -202,11 +195,8 @@ class ProductController extends Controller
         $mpdf = new Mpdf();
         $html = view('products.print_pdf', $data)->render();
         $mpdf->WriteHTML($html);
-        return $mpdf->Output('products.pdf', 'I'); // 'I' for inline display
+        return $mpdf->Output('products.pdf', 'D'); // 'I' for inline display
     }
-=======
-
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 
 
 

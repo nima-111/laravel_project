@@ -35,9 +35,7 @@ Route::post('/products', [ProductController::class, 'store'])->name('products.st
 Route::get('/api/products/{product}', [ProductController::class, 'show'])->name('api.products.show');
 Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
-
 Route::get('/products/print', [ProductController::class, 'print'])->name('products.print');
-
 Route::get('/products-by-category', [CategoryController::class, 'productsByCategory'])->name('products.by.category');
 Route::get('/products-by-category/{category}', [CategoryController::class, 'getProductsByCategory'])->name('products.filter.by.category');
 
@@ -114,27 +112,21 @@ Route::put('/profile', [AuthController::class, 'updateProfile'])->name('profile.
 Route::put('/password', [AuthController::class, 'updatePassword'])->name('password.change');
 
 // Dashboard Route
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name(name: 'dashboard');
 
 // Test Mail Route
 Route::get('/testmail', function() {
     $name = "ismo developpers";
 
     // The email sending is done using the to method on the Mail facade
-    Mail::to('....@gmail.com')->send(new MyTestMail($name));
+    Mail::to('...@gmail.com')->send(new MyTestMail($name));
     return 'Email a envoyé avec success';
 });
-
 
 // session , cookie , avatar
 Route::post("/saveCookie", [DashboardController::class, 'saveCookie'])->name("saveCookie");
 Route::post("/saveSession", [DashboardController::class, 'saveSession'])->name("saveSession");
 Route::post("/saveAvatar", [DashboardController::class, 'saveAvatar'])->name("saveAvatar");
-
-
-
-
-
 
 
 

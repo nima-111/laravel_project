@@ -51,10 +51,6 @@
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<<<<<<< HEAD
-=======
-    @stack('scripts')
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
     <script>
         $("#selectLocale").on('change',function(){
             var locale = $(this).val();
@@ -67,13 +63,10 @@
             <p class="mb-0">&copy; {{ date('Y') }} Stock Management System. All rights reserved.</p>
         </div>
     </footer>
-<<<<<<< HEAD
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     @stack('scripts')
-=======
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 </body>
 
 </html>

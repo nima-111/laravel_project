@@ -5,13 +5,6 @@
     <h2 class="display-4 mb-4">@lang("Welcome")</h2>
     <p class="lead mb-4">@lang("Slogon")</p>
 
-<<<<<<< HEAD
-=======
-    
-
-
-
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 
     <div class="container">
         <div class="row g-3">
@@ -76,7 +69,6 @@
             <div class="col-md-3">
                 <a href="{{ route('sotre.greater_than_lind') }}" class="btn text-white btn-lg w-100" style="background-color:#6610f2;">Stores > Rice LLC</a>
             </div>
-<<<<<<< HEAD
             <br><br><br>
 
 <div class="justify-content-center gap-3">
@@ -141,9 +133,5 @@
     {{-- Include the category chart partial --}}
 @include('partials._category_chart')
 @include('partials._store_chart')
-=======
-        </div>
-    </div>
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
 </div>
 @endsection

@@ -28,11 +28,8 @@
                     </svg>
                     Back to Dashboard
                 </a>
-<<<<<<< HEAD
                 <a class="btn btn-success" href="{{ route('products.print') }}" target="_blank"><i class="fa fa-print"></i>
                     Print</a>
-=======
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
                 <button type="button" class="btn bg-info text-white  " data-bs-toggle="modal"
                     data-bs-target="#importProductModal">
                     <i class="fa fa-file"></i> Import

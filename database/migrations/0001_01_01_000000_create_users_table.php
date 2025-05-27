@@ -19,11 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('role')->default('normal');
             $table->boolean('is_active')->default(true);
-<<<<<<< HEAD
             $table->string('avatar')->nullable();
-=======
-
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00
             $table->rememberToken();
             $table->timestamps();
         });
@@ -53,8 +49,4 @@ return new class extends Migration
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 3bc9ad0becf7a3d6ede5c5d26573886f55036e00

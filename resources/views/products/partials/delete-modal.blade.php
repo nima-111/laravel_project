@@ -31,7 +31,7 @@ $(document).ready(function() {
         let productId = $('#deleteProductId').val();
 
         $.ajax({
-            url: `/products/${productId}`,
+            url: /products/${productId},
             type: 'POST',
             data: $(this).serialize(),
             success: function(response) {
